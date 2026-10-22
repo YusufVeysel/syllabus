@@ -7,3 +7,4 @@ dist-mac/
 __pycache__/
 *.spec
 .claude/
+dist-ci/

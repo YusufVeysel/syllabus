@@ -104,7 +104,7 @@ It gets its own Dock icon and window and syncs like the others. Google sign-in w
 bash desktop/build-mac.sh
 ```
 
-Drag `dist-mac/Syllabus.app` into Applications. It's unsigned, so the first time **right-click it → Open → Open** (or allow it in System Settings → Privacy & Security). Tasks are kept in `~/Library/Application Support/Syllabus`. Like the .exe, it uses email sign-in.
+Drag `dist-mac/Syllabus.app` into Applications. It's unsigned, so macOS blocks it the first time. Open it once and let it be blocked, then go to **System Settings → Privacy & Security** → **Open Anyway** and confirm with your password. If that button doesn't appear (or macOS says the app is "damaged"), run `xattr -dr com.apple.quarantine /Applications/Syllabus.app` in Terminal. Tasks are kept in `~/Library/Application Support/Syllabus`. Like the .exe, it uses email sign-in.
 
 **C. No Mac? Let GitHub build it for free.** Put the `To-do APP` folder in a GitHub repository (the `.gitignore` leaves out build leftovers). Open the repository's **Actions** tab → **Build desktop apps** → **Run workflow**. After about 5 minutes, download **Syllabus-mac** (and a fresh **Syllabus-windows**) from the finished run's Artifacts section.
 

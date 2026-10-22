@@ -1,0 +1,9 @@
+.venv/
+.venv-mac/
+build/
+build-mac/
+dist/
+dist-mac/
+__pycache__/
+*.spec
+.claude/
